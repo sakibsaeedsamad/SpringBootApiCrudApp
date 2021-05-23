@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SpringBootApiCrudApp</string>
+    <string-array name="locationAarray">
+        <item>Dhaka</item>
+        <item>Chattogram</item>
+        <item>Sylhet</item>
+        <item>Khulna</item>
+        <item>Rangpur</item>
+        <item>Rajshahi</item>
+        <item>Barishal</item>
+        <item>Mymensingh</item>
+    </string-array>
+</resources>
