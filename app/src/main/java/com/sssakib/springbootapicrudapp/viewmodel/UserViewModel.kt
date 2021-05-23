@@ -35,16 +35,17 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
 
     fun getAllUsers() {
 
-        val call: Call<User>? = RetrofitClient
+        val call: Call<List<User>?>? = RetrofitClient
             .instance
             ?.aPI
             ?.findAllUsers()
-        call?.enqueue(object : Callback<User> {
-            override fun onFailure(call: Call<User>, t: Throwable) {
+        call?.enqueue(object : Callback<List<User>?> {
+            override fun onFailure(call: Call<List<User>?>?, t: Throwable) {
             }
-            override fun onResponse(call: Call<User>, response: Response<User>) {
-                if (response.isSuccessful) {
-                    val list = listOf(response.body())
+            override fun onResponse(call: Call<List<User>?>?, response: Response<List<User>?>?) {
+                if (response!!.isSuccessful) {
+                    val list = response.body()
+                    Log.e("MSG","User"+list)
 
                     allUsers.postValue( list as List<User>)
                 }
@@ -122,6 +123,7 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
 
 
 }
+
 
 
 

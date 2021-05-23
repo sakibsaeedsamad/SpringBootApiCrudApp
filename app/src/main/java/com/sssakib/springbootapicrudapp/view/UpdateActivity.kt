@@ -205,7 +205,7 @@ class UpdateActivity : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
         } else {
-            val user = User(name, uAge, phone, uGender, locationString, uImage)
+            val user = User(uId,name, phone, uAge, uGender, locationString, uImage)
             viewModel.updateUserInfo(user)
 
 

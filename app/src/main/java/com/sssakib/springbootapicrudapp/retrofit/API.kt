@@ -9,7 +9,7 @@ interface API {
 
 
     @GET("allUser")
-    fun findAllUsers(): Call<User>?
+    fun findAllUsers(): Call<List<User>?>
 
     @POST("insertUser")
     fun insertUser(@Body user: User?): Call<User?>?
