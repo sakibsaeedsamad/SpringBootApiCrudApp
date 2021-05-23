@@ -45,8 +45,6 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
             override fun onResponse(call: Call<List<User>?>?, response: Response<List<User>?>?) {
                 if (response!!.isSuccessful) {
                     val list = response.body()
-                    Log.e("MSG","User"+list)
-
                     allUsers.postValue( list as List<User>)
                 }
             }
