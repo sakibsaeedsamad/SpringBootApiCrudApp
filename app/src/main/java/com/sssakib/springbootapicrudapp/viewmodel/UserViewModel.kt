@@ -104,9 +104,7 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
         call?.enqueue(object : Callback<DeleteResponse?> {
             override fun onFailure(call: Call<DeleteResponse?>, t: Throwable) {
 
-            }
-
-            override fun onResponse(
+            }override fun onResponse(
                 call: Call<DeleteResponse?>,
                 response: Response<DeleteResponse?>
             ) {

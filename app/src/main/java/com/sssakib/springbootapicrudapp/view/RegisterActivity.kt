@@ -184,7 +184,7 @@ class RegisterActivity : AppCompatActivity() {
 
 
         else {
-            val user = User(name,  phone, age, genderString, locationString, imageResult)
+            val user = User(name,phone, age, genderString, locationString, imageResult)
             viewModel.insertUserInfo(user)
 
             val intent =Intent(this, MainActivity::class.java)
