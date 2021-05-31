@@ -15,12 +15,8 @@ interface API {
     fun insertUser(@Body user: User?): Call<User?>?
 
     @POST("updateUser/{id}")
-    fun updateUser(
-        @Body user: User?,
-        @Path("id") id: Int
-    ): Call<User?>?
+    fun updateUser(@Body user: User?,@Path("id") id: Int): Call<User?>?
 
-    @DELETE("" +
-            "")
+    @DELETE("deleteUser/{id}")
     fun deleteUser(@Path("id") id:Int): Call<DeleteResponse?>
 }

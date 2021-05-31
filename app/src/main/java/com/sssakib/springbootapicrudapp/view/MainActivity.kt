@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity(), ListOfUserAdapter.OnRowClickListener {
         val uImage = user.image
 
 
-        val intent = Intent(this, UpdateActivity::class.java)
+        val intent = Intent(this@MainActivity, UpdateActivity::class.java)
         intent.putExtra("id", uId)
         intent.putExtra("name", uName)
         intent.putExtra("age", uAge)
@@ -91,6 +91,7 @@ class MainActivity : AppCompatActivity(), ListOfUserAdapter.OnRowClickListener {
             .customView(R.layout.activity_dialog)
 
         dialog.userDeleteOkButton.setOnClickListener {
+
             viewModel.deleteUserInfo(user)
             dialog.dismiss()
         }
